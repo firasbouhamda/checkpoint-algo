@@ -1,0 +1,28 @@
+ALGORITHM sentence
+VAR
+i : INTEGER;
+l,nbmot,nbvoy : INTEGER := 0;
+s : STRING;
+c : CHAR;
+
+BEGIN
+read (c)
+WHILE (c <> '.') DO
+    write ("hello put a sentence")
+END_WHILE
+read (s)
+FOR i FROM s[0] TO length(s) STEP step  DO
+    l := l+1;
+
+IF (c =" ") THEN
+    nbmot := nbmot+1;
+END_IF
+IF (s[i]=['a','i','e','o','y','u']) THEN
+    nbvoy := nbvoy+1;
+END_IF
+
+END_FOR
+read(l)
+read(nbmot)
+read(nbvoy)
+END
